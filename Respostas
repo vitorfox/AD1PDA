@@ -1,0 +1,114 @@
+1:
+início 
+	leia x
+	leia y
+	x <- y
+fim
+
+2:
+
+	As variáveis que podem ser usadas como nome de variável em PETEQS são:
+		saldo, AnoNascimento.
+
+	Não se pode usar espaços em nomes de variável como "salario atual".
+
+	Nome de variável deve iniciar com letras. "2casa" não é permitido.
+
+	Não é permitido uso de símbolos diferentes de letras ou algorismos,
+	exceto sublinha, no nome de variável, como "Ano.Nascimento".
+
+3:
+	a) 1
+	b) 1.8
+	c) 7.0
+	d) 0
+	c) 19
+4:
+
+	Os números válidos em PETEQS são: 3.141516, -34.567
+
+	Não é permitido o uso de dízima periódica como "0.333...".
+	Não é permitido o uso de expoentes como "3 elevado a 3".
+	Não é permitido o uso de vírgulas como "3,141516"
+
+5:
+	pi = 100;
+	fi = 100;
+	A quantidade de fichas finais do filho(ff) é igual a 3 vezes
+	a quantidade de fichas finais do pai (pf). 	
+	ff = 3pf;
+
+	A quantidade total de fichas é a soma de fichas finais de cada um.
+	ff + pf = 200;
+
+	Logo temos que:	
+	3pf + pf = 200;
+
+	4pf = 200;
+	pf = 200/4;
+
+	A quantidade final de fichas de cada um foi:
+	pf = 50;
+	ff = 150;
+
+	A quantidade de derrota é igual a quantidade de partidas menos
+	a quantidade de vitórias
+	d + v = 20
+	d = 20 - v
+
+	d * (-4) + v * 6 = 50
+	6v - d4 = 50
+	6v - (4 * (20 - v)) = 50
+	6v - 80 + 4v = 50
+	6v + 4v = 50 + 80
+	10v = 130
+	v = 13
+
+	d = 20 - v
+	d = 20 - 13
+	d = 7
+
+	O filho ganhou 13 partidas.
+
+6:
+	Ai = X;
+	Bi = Y;
+	Ci = Z;
+
+	Af = 16;
+	Bf = 16;
+	Cf = 16;
+
+	UE:
+		Af = 16;
+		Bf = 16;
+		Cf = 16;	
+
+	UE -1:
+		Af = 8;
+		Bf = 8;
+		Cf = 32;	
+
+	UE -2:
+		Af = 4;
+		Bf = 28;
+		Cf = 16;
+
+	UE -3:
+		Af = 26;
+		Bf = 14;
+		Cf = 8;	
+
+7:
+	y não possui valor algum. O correto seria:
+
+	início
+		leia y
+		x <- y
+	fim
+
+8:
+	início
+		leia num
+		lsdt <- num mod 10
+	fim
