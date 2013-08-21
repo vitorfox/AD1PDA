@@ -1,9 +1,9 @@
 1:
-início 
-	leia x
-	leia y
-	x <- y
-fim
+	início 
+		leia x
+		leia y
+		x <- y
+	fim
 
 2:
 
@@ -71,51 +71,73 @@ fim
 	O filho ganhou 13 partidas.
 
 6:
-	Ai = X;
-	Bi = Y;
-	Ci = Z;
 
-	Af = 16;
-	Bf = 16;
-	Cf = 16;
+	Arnaldo = A = X 
+	Beatriz = B = Y
+	Carlos = C = Z
 
-	UE é o Último Estado. Vamos voltar passo a passo para descobrirmos
-	os valores iniciais.
+	A dá pra B e C:
+	A = X - Y - Z
+	B = 2Y
+	C = 2Z
 
-	UE:
-	Todos ao final possuiam o mesmo valor: 16.
-		Af = 16;
-		Bf = 16;
-		Cf = 16;	
+	B dá pra A e C:
+	A = 2(X - Y - Z)
+	B = 2Y - 2Z - (X - Y - Z)
+	C = 4Z
 
-	Carlos (Cf) deu para Beatriz (Bf) e para Arnaldo (Af) os valores
-	que cada um tinha. Ou seja, a metade do que cada um tem, que é 8.
-	Se Cf deu 8 para cada, logo deu 8*2 = 16. Logo entendemos que o
-	estado antes de Cf dar era:
+	C dá pra A e B:
+	A = 4(X - Y - Z)
+	B = 2(2Y - 2Z - (X - Y - Z))
+	C = 4Z - 2(X - Y - Z) - (2Y - 2Z - (X - Y - Z))
 
-	UE -1:
-		Af = 8;
-		Bf = 8;
-		Cf = 32;	
+	Simplificando:
+	A = 4X - 4Y - 4Z
+	B = 6Y - 2Z - 2X
+	C = 7Z - X - Y
 
-	Bf faz o mesmo com Af e Cf. O que cada um tinha é a metade
-	do que cada um tem: Af = 4 e Cf = 16. A soma destes valores é 20. Este 
-	valor é somado ao valor de Bf. Logo entendemos que o estado antes
-	de Bf dar era:
+	A=>
+	4X - 4Y - 4Z = 16
+	4X - 4Y - 4Z = 4*4
+	X - Y - Z = 4
+	X = 4 + Y + Z
 
-	UE -2:
-		Af = 4;
-		Bf = 28;
-		Cf = 16;
+	B=>
+	6Y - 2Z - 2X = 16
+	3Y - Z - X = 8
+	3Y - Z - 8 = X
+
+	3Y - Z - 8 = 4 + Y + Z
+	2Y = 2Z + 12
+	Y = Z + 6
+
+	C=>
+	7Z - X - Y = 16
+	7Z = 16 + X + Y
+	7Z = 16 + X + Z + 6
+	6Z = 22 + X
+	X = 6Z - 22
+
+	X = 4 + Z + 6 + Z
+	X = 10 + 2Z
+
+	10 + 2Z = 6Z - 22
+	32 = 4Z
+	Z = 8
+
+	X = 10 + 2 * 8
+	X = 26
+	Y = 8 + 6 
+	Y = 14
 
 
-	Finalmente Af faz o mesmo com Bf e Cf. Realizando o mesmo procedimento
-	entendemos que: Bf = 14 e Cf = 8. A soma é 22. Somando isto ao valor
-	de Af temos, sendo estes os valores inicias:
-	UE -3:
-		Af = 26;
-		Bf = 14;
-		Cf = 8;	
+	Resultado encontrado:
+	X = 26
+	Y = 14
+	Z = 8
+
+	Concluindo:
+		Arnaldo tinha X (26), Beatriz Y (14) e Carlos Z (8).
 
 7:
 	y não possui valor algum. O correto seria:
