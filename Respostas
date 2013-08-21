@@ -79,21 +79,39 @@ fim
 	Bf = 16;
 	Cf = 16;
 
+	UE é o Último Estado. Vamos voltar passo a passo para descobrirmos
+	os valores iniciais.
+
 	UE:
+	Todos ao final possuiam o mesmo valor: 16.
 		Af = 16;
 		Bf = 16;
 		Cf = 16;	
+
+	Carlos (Cf) deu para Beatriz (Bf) e para Arnaldo (Af) os valores
+	que cada um tinha. Ou seja, a metade do que cada um tem, que é 8.
+	Se Cf deu 8 para cada, logo deu 8*2 = 16. Logo entendemos que o
+	estado antes de Cf dar era:
 
 	UE -1:
 		Af = 8;
 		Bf = 8;
 		Cf = 32;	
 
+	Bf faz o mesmo com Af e Cf. O que cada um tinha é a metade
+	do que cada um tem: Af = 4 e Cf = 16. A soma destes valores é 20. Este 
+	valor é somado ao valor de Bf. Logo entendemos que o estado antes
+	de Bf dar era:
+
 	UE -2:
 		Af = 4;
 		Bf = 28;
 		Cf = 16;
 
+
+	Finalmente Af faz o mesmo com Bf e Cf. Realizando o mesmo procedimento
+	entendemos que: Bf = 14 e Cf = 8. A soma é 22. Somando isto ao valor
+	de Af temos, sendo estes os valores inicias:
 	UE -3:
 		Af = 26;
 		Bf = 14;
